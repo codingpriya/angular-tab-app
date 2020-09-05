@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-tab-group mat-align-tabs="center">
+                <!----- List of Cards Tab ------>
+                <mat-tab label="List of Cards">
+                    <div class="lists-row d-flex align-items-center">
+                        <div class="lists-col m-20" *ngFor="let list of lists">
+                            <mat-card class="fund-card">
+                                <mat-card-title>{{list.name}}</mat-card-title>
+                                <mat-card-content>
+                                    <p class="d-flex justify-content-between">
+                                        <span>{{list.currency}} (Primary)</span>
+                                        <span>
+                                            <span *ngIf="list.currency === 'INR'">₹</span>
+                                            <span *ngIf="list.currency === 'USD'">$</span>
+                                            {{list.amount}}
+                                        </span>
+                                    </p>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button mat-raised-button color="primary">Deposit Funds</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+                    </div>
+                </mat-tab>
+
+                <!----- Form Submission Tab ------>
+                <mat-tab label="Form submission">
+                    <div class="row">
+                        <div class="col-md-4 offset-md-4">
+                            <form class="mt-5" [formGroup]="userForm" (ngSubmit)="submit()">
+                                <mat-form-field class="w-100">
+                                    <mat-label>Email Address</mat-label>
+                                    <input matInput type="text" placeholder="Enter email" formControlName="email">
+                                </mat-form-field>
+
+                                <mat-form-field class="w-100">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput type="password" placeholder="Enter password" formControlName="password">
+                                </mat-form-field>
+
+                                <mat-checkbox formControlName="check_me">Check me out!</mat-checkbox>
+
+                                <p class="w-100 mt-4">
+                                    <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid">Submit</button>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </mat-tab>
+
+            </mat-tab-group>
+        </div>
+    </div>
+</div>

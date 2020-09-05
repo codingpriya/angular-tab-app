@@ -1,0 +1,61 @@
+[
+    {
+        "name": "Title1",
+        "currency": "INR",
+        "amount": 120
+    },
+
+    {
+        "name": "Title2",
+        "currency": "USD",
+        "amount": 130
+    },
+
+    {
+        "name": "Title3",
+        "currency": "USD",
+        "amount": 140
+    },
+
+    {
+        "name": "Title4",
+        "currency": "INR",
+        "amount": 150
+    },
+
+    {
+        "name": "Title5",
+        "currency": "INR",
+        "amount": 160
+    },
+
+    {
+        "name": "Title6",
+        "currency": "USD",
+        "amount": 170
+    },
+
+    {
+        "name": "Title7",
+        "currency": "INR",
+        "amount": 180
+    },
+
+    {
+        "name": "Title8",
+        "currency": "INR",
+        "amount": 190
+    },
+
+    {
+        "name": "Title9",
+        "currency": "USD",
+        "amount": 200
+    },
+
+    {
+        "name": "Title10",
+        "currency": "INR",
+        "amount": 120
+    }
+]
